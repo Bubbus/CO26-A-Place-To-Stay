@@ -359,57 +359,57 @@ _backpack = {
 // The following blocks of code define loadouts for each type of unit (the unit type
 // is passed to the script in the first variable)
 
-_pickUniform = 
+_pickUniform =
 {
 	_items = ["Cre8ive_Bw_Uniform_D_1", "Cre8ive_Bw_Uniform_D_2"];
-	
+
 	selectRandom _items
-	
+
 };
 
 
-_pickVest = 
+_pickVest =
 {
 	_items = ["Cre8ive_Bw_Vest_D_1", "Cre8ive_Bw_Vest_D_2"];
-	
+
 	selectRandom _items
-	
+
 };
 
 
-_pickHelmet = 
+_pickHelmet =
 {
-	_items = ["Cre8ive_Bw_Helmet_D", "Cre8ive_Bw_Helmet_D", "rhsusf_mich_bare_norotos_arc_alt_tan", "rhsusf_opscore_ut_pelt", "H_HelmetSpecB_sand", "rhsusf_ach_bare_des"];
-	
+	_items = ["Cre8ive_Bw_Helmet_D", "Cre8ive_Bw_Helmet_D", "Cre8ive_Bw_Helmet_D", "Cre8ive_Bw_Helmet_D", "Cre8ive_Bw_Boonie_D", "rhsusf_opscore_ut_pelt", "rhsusf_opscore_paint_pelt_nsw", "rhsusf_opscore_mar_ut_pelt"];
+
 	selectRandom _items
-	
+
 };
 
 
-_pickMuzzle = 
+_pickMuzzle =
 {
-	_items = ["", "", "ACE_muzzle_mzls_L", "rhsusf_acc_SF3P556", "rhsusf_acc_SFMB556"];
-	
+	_items = ["", "", "rhsusf_acc_SF3P556", "rhsusf_acc_SFMB556"];	// removed ACE_muzzle_mzls_L for aesthetics
+
 	selectRandom _items
-	
+
 };
 
 
-_pickRail = 
+_pickRail =
 {
 	_items = ["", "", "acc_flashlight", "FHQ_acc_LLM01F", "UK3CB_BAF_LLM_Flashlight_Black", "acc_pointer_IR", "ACE_acc_pointer_green"];
-	
+
 	selectRandom _items
-	
+
 };
 
 
-_pickBackpack = 
+_pickBackpack =
 {
 	_items = ["Cre8ive_Bw_Assault_D", "Cre8ive_Bw_Assault_D", "Cre8ive_Bw_Kitbag_D", "Cre8ive_Bw_Kitbag_D", "Cre8ive_Bw_Carryall_D"];
-	
+
 	selectRandom _items
-	
+
 };
 
 
@@ -422,64 +422,63 @@ switch (_typeofUnit) do
 
 	case "aar":
 	{
-		_unit setUnitLoadout [["hlc_rifle_G36V",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",3,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",5,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_100Rnd_792x57_AP_MG42",3,100],["hlc_30rnd_556x45_EPR_G36",1,30]]],[] call _pickHelmet,"",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [["hlc_rifle_G36V",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",3,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",5,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_100Rnd_792x57_AP_MG42",3,100],["hlc_30rnd_556x45_EPR_G36",1,30]]],[] call _pickHelmet,"UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "ar":
 	{
-		_unit setUnitLoadout [["hlc_lmg_mg42kws_b","",[] call _pickRail,"optic_MRCO",["hlc_100Rnd_792x57_AP_MG42",100],[],""],[],[],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",1,1],["SmokeShell",1,1],["hlc_100Rnd_792x57_M_MG42",1,100]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_100Rnd_792x57_AP_MG42",3,100]]],[] call _pickHelmet,"",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [["hlc_lmg_mg42kws_b","",[] call _pickRail,"optic_MRCO",["hlc_100Rnd_792x57_AP_MG42",100],[],""],[],[],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",1,1],["SmokeShell",1,1],["hlc_100Rnd_792x57_M_MG42",1,100]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_100Rnd_792x57_AP_MG42",3,100]]],[] call _pickHelmet,"UK3CB_BAF_G_Tactical_Grey",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "co":
 	{
-		_unit setUnitLoadout [["hlc_rifle_G36KV",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1],["ACRE_PRC148",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",6,30],["hlc_30rnd_556x45_Tracers_G36",1,30],["SmokeShellGreen",2,1]]],[],"H_MilCap_mcamo","",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [["hlc_rifle_G36V",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1],["ACRE_PRC148",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",6,30],["hlc_30rnd_556x45_Tracers_G36",1,30],["SmokeShellGreen",2,1]]],[],"H_MilCap_mcamo","",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "ftl":
 	{
-		_unit setUnitLoadout [["hlc_rifle_G36VAG36",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],["1Rnd_HE_Grenade_shell",1],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1],["ACRE_PRC152",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",2,1],["SmokeShellGreen",1,1],["SmokeShellRed",1,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",3,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["1Rnd_HE_Grenade_shell",10,1],["1Rnd_Smoke_Grenade_shell",3,1],["1Rnd_SmokeGreen_Grenade_shell",2,1],["1Rnd_SmokePurple_Grenade_shell",2,1],["hlc_30rnd_556x45_EPR_G36",5,30]]],[] call _pickHelmet,"",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [["hlc_rifle_G36VAG36",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],["1Rnd_HE_Grenade_shell",1],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1],["ACRE_PRC152",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",2,1],["SmokeShellGreen",1,1],["SmokeShellRed",1,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",3,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["1Rnd_HE_Grenade_shell",10,1],["1Rnd_Smoke_Grenade_shell",3,1],["1Rnd_SmokeGreen_Grenade_shell",2,1],["1Rnd_SmokePurple_Grenade_shell",2,1],["hlc_30rnd_556x45_EPR_G36",5,30]]],[] call _pickHelmet,"UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "sl":
 	{
-		_unit setUnitLoadout [["hlc_rifle_G36VAG36",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],["1Rnd_HE_Grenade_shell",1],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1],["ACRE_PRC152",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",2,1],["SmokeShellGreen",1,1],["SmokeShellRed",1,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",3,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["1Rnd_HE_Grenade_shell",10,1],["1Rnd_Smoke_Grenade_shell",3,1],["1Rnd_SmokeGreen_Grenade_shell",2,1],["1Rnd_SmokePurple_Grenade_shell",2,1],["hlc_30rnd_556x45_EPR_G36",5,30]]],[] call _pickHelmet,"",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [["hlc_rifle_G36VAG36",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],["1Rnd_HE_Grenade_shell",1],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1],["ACRE_PRC152",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",2,1],["SmokeShellGreen",1,1],["SmokeShellRed",1,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",3,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["1Rnd_HE_Grenade_shell",10,1],["1Rnd_Smoke_Grenade_shell",3,1],["1Rnd_SmokeGreen_Grenade_shell",2,1],["1Rnd_SmokePurple_Grenade_shell",2,1],["hlc_30rnd_556x45_EPR_G36",5,30]]],[] call _pickHelmet,"UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "lat":
 	{
-		_unit setUnitLoadout [["hlc_rifle_G36V",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],["UK3CB_BAF_AT4_CS_AP_Launcher","","","",[],[],""],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",3,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",5,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_30rnd_556x45_EPR_G36",5,30]]],[] call _pickHelmet,"",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [["hlc_rifle_G36V",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],["UK3CB_BAF_AT4_CS_AP_Launcher","","","",[],[],""],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",3,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",5,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_30rnd_556x45_EPR_G36",5,30]]],[] call _pickHelmet,"UK3CB_BAF_G_Tactical_Grey",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "med":
 	{
-		_unit setUnitLoadout [["hlc_rifle_G36KV",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",6,30],["hlc_30rnd_556x45_Tracers_G36",1,30],["SmokeShellGreen",2,1]]],[[] call _pickBackpack,[["ACE_CableTie",2],["ACE_bloodIV",10],["ACE_fieldDressing",24],["ACE_epinephrine",10],["ACE_morphine",24]]],[] call _pickHelmet,"",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [["hlc_rifle_G36V",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",6,30],["hlc_30rnd_556x45_Tracers_G36",1,30],["SmokeShellGreen",2,1]]],[[] call _pickBackpack,[["ACE_CableTie",2],["ACE_bloodIV",10],["ACE_fieldDressing",24],["ACE_epinephrine",10],["ACE_morphine",24]]],[] call _pickHelmet,"UK3CB_BAF_G_Tactical_Grey",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "mk":
 	{
-		_unit setUnitLoadout [["hlc_rifle_g3sg1ris","","","optic_SOS",["hlc_20rnd_762x51_b_G3",20],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",3,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_20rnd_762x51_b_G3",5,20]]],[[] call _pickBackpack,[["ACE_CableTie",2],["rhs_mag_m67",1,1],["hlc_20rnd_762x51_T_G3",2,20]]],[] call _pickHelmet,"",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [["hlc_rifle_g3sg1ris","","","optic_SOS",["hlc_20rnd_762x51_b_G3",20],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",2,1],["SmokeShell",3,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_20rnd_762x51_b_G3",5,20]]],[[] call _pickBackpack,[["ACE_CableTie",2],["rhs_mag_m67",1,1],["hlc_20rnd_762x51_T_G3",2,20]]],[] call _pickHelmet,"UK3CB_BAF_G_Tactical_Grey",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "rif":
 	{
-		_unit setUnitLoadout [["hlc_rifle_G36V",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",3,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",5,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_30rnd_556x45_EPR_G36",8,30],["hlc_30rnd_556x45_Tracers_G36",2,30],["rhs_mag_m67",1,1]]],[] call _pickHelmet,"",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
-	};	
-	
+		_unit setUnitLoadout [["hlc_rifle_G36V",[] call _pickMuzzle,[] call _pickRail,"SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",3,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",5,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_30rnd_556x45_EPR_G36",8,30],["hlc_30rnd_556x45_Tracers_G36",2,30],["rhs_mag_m67",1,1]]],[] call _pickHelmet,"UK3CB_BAF_G_Tactical_Grey",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+	};
+
 	case "zeus":
 	{
 		_unit setUnitLoadout [["rhs_weap_kar98k","","","",["rhsgref_5Rnd_792x57_kar98k",5],[],""],[],["hlc_smg_mp5k","","","",["hlc_30Rnd_9x19_B_MP5",30],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1],["ACRE_PRC148",1]]],["LOP_V_6B23_6Sh92_UN",[["rhs_mag_m67",2,1],["SmokeShell",2,1],["SmokeShellGreen",2,1],["rhsgref_5Rnd_792x57_kar98k",10,5],["hlc_30Rnd_9x19_B_MP5",3,30]]],[],"rhsgref_un_beret","",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "journo_mic":
 	{
-		_unit setUnitLoadout [[],[],["Press_Mic_BBC_F","","","",[],[],""],["Cre8ive_CU_Uniform_Polo_Grey",[["ACE_fieldDressing",4],["ACE_epinephrine",1],["ACE_morphine",2]]],["V_Press_F",[]],[],"H_Cap_press","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [[],[],["Press_Mic_ZDF_F","","","",[],[],""],["Cre8ive_CU_Uniform_Polo_Grey",[["ACE_fieldDressing",4],["ACE_epinephrine",1],["ACE_morphine",2]]],["V_Press_F",[]],[],"H_Cap_press","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
 	};
-	
+
 	case "journo_cam":
 	{
 		_unit setUnitLoadout [[],["Press_Cam_F","","","",["Tape_F",1],[],""],[],["Cre8ive_CU_Uniform_Polo_Khaki",[["ACE_fieldDressing",4],["ACE_epinephrine",1],["ACE_morphine",2]]],["V_Press_F",[]],[],"H_Cap_press","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
 	};
-	
 
 // CRATE: Small, ammo for 1 fireteam
 	case "crate_small":
@@ -488,7 +487,7 @@ switch (_typeofUnit) do
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		
+
 		_unit addItemCargoGlobal ["hlc_rifle_G36V", 2];
 		_unit addItemCargoGlobal ["SMA_AIMPOINT", 2];
 		_unit addItemCargoGlobal ["UK3CB_BAF_AT4_CS_AP_Launcher", 2];
@@ -507,7 +506,7 @@ switch (_typeofUnit) do
 		_unit addItemCargoGlobal ["ACE_SpareBarrel", 1];
 
 		_unit addItemCargoGlobal [[] call _pickBackpack, 2];
-		
+
 		_unit addItemCargoGlobal ["rhs_mag_m67", 5];
 		_unit addItemCargoGlobal ["SmokeShell", 5];
 		_unit addItemCargoGlobal ["SmokeShellGreen", 2];
@@ -516,7 +515,7 @@ switch (_typeofUnit) do
 		_unit addItemCargoGlobal ["ACRE_PRC343", 6];
 		_unit addItemCargoGlobal ["ACRE_PRC152", 2];
 		_unit addItemCargoGlobal ["ACRE_PRC148", 2];
-		
+
 		_unit addItemCargoGlobal ["Toolkit", 1];
 	};
 
@@ -527,7 +526,7 @@ switch (_typeofUnit) do
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		
+
 		_unit addItemCargoGlobal ["hlc_rifle_G36V", 4];
 		_unit addItemCargoGlobal ["SMA_AIMPOINT", 4];
 		_unit addItemCargoGlobal ["UK3CB_BAF_AT4_CS_AP_Launcher", 4];
@@ -546,7 +545,7 @@ switch (_typeofUnit) do
 		_unit addItemCargoGlobal ["ACE_SpareBarrel", 2];
 
 		_unit addItemCargoGlobal [[] call _pickBackpack, 4];
-		
+
 		_unit addItemCargoGlobal ["rhs_mag_m67", 10];
 		_unit addItemCargoGlobal ["SmokeShell", 10];
 		_unit addItemCargoGlobal ["SmokeShellGreen", 4];
@@ -555,14 +554,14 @@ switch (_typeofUnit) do
 		_unit addItemCargoGlobal ["ACRE_PRC343", 12];
 		_unit addItemCargoGlobal ["ACRE_PRC152", 4];
 		_unit addItemCargoGlobal ["ACRE_PRC148", 4];
-		
+
 		_unit addItemCargoGlobal ["Toolkit", 1];
 	};
 
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)
    default
    {
-		_unit setUnitLoadout [["hlc_rifle_G36V","","","SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",3,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",5,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_30rnd_556x45_EPR_G36",8,30],["hlc_30rnd_556x45_Tracers_G36",2,30],["rhs_mag_m67",1,1]]],[] call _pickHelmet,"",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
+		_unit setUnitLoadout [["hlc_rifle_G36V","","","SMA_AIMPOINT",["hlc_30rnd_556x45_EPR_G36",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],[[] call _pickUniform,[["ACE_fieldDressing",6],["ACE_morphine",6],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_Flashlight_XL50",1],["ACE_bloodIV",1]]],[[] call _pickVest,[["rhs_mag_m67",3,1],["SmokeShell",2,1],["rhsusf_mag_15Rnd_9x19_FMJ",2,15],["hlc_30rnd_556x45_EPR_G36",5,30],["hlc_30rnd_556x45_Tracers_G36",3,30]]],[[] call _pickBackpack,[["ACE_CableTie",2],["hlc_30rnd_556x45_EPR_G36",8,30],["hlc_30rnd_556x45_Tracers_G36",2,30],["rhs_mag_m67",1,1]]],[] call _pickHelmet,"UK3CB_BAF_G_Tactical_Grey",["","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]];
 
 		if (true) exitwith {player globalchat format ["DEBUG (f\assignGear\f_assignGear_nato.sqf): Unit = %1. Gear template %2 does not exist, used Rifleman instead.",_unit,_typeofunit]};
    };
