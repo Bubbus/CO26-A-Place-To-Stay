@@ -507,7 +507,7 @@ switch (_typeofUnit) do
 
 	};
 	
-	case "r":
+	case "rif":
 	{
 		removeAllWeapons _unit;
 		removeAllItems _unit;
@@ -733,7 +733,7 @@ switch (_typeofUnit) do
 		
 	};
 	
-	case "gl":
+	case "gren":
 	{
 		removeAllWeapons _unit;
 		removeAllItems _unit;
@@ -813,7 +813,7 @@ switch (_typeofUnit) do
 
 	};
 	
-	case "m":
+	case "med":
 	{
 		removeAllWeapons _unit;
 		removeAllItems _unit;

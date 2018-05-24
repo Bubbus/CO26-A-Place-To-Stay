@@ -10,6 +10,12 @@ if (!isDedicated && (isNull player)) then
 };
 
 params ["_unit","_corpse"];
+
+if (local _unit) then 
+{
+    [_unit] call ca_fnc_medicalOverrideLoop;
+};
+
 if (!f_var_JIP_JIPMenu && isNull _corpse) exitWith {}; // If no corpse exists the player is spawned for the first time.
 if (time < 10 && isNull _corpse) exitWith {}; //if not a JIP exit out
 
